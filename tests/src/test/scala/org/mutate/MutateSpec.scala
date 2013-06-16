@@ -1,5 +1,6 @@
+package org.mutate
+
 import org.scalatest._
-import org.mutate.{Lenser ⇒ $}
 import org.mutate.Mutate._
 
 class MutateSpec extends FlatSpec {
