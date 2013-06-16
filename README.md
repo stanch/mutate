@@ -31,9 +31,9 @@ assert(b === B("foo", A(List(4, 8), 9, Some(A(List(), 18, None)))))
 ### Wait, what?
 
 * ```mutate``` is a macro that parses its second argument and searches for anything of type ```Mutation[A]```, which is
-a simple wrapper around ```A ⇒ A```. The result is all mutations applied to the original value in otrer of their appearance.
-* The ```$```, passed to the closure, can be used to create lenses dynamically. ```*``` is a special field that builds
-a lens going inside functors.
+a simple wrapper around ```A ⇒ A```. The result is all mutations applied to the original value in order of their appearance.
+* The ```$```, passed to the closure, can be used to create lenses at will. ```*``` is a special field that builds
+a lens going inside functors like List or Option. Did I mention there was no runtime reflexion involved?
 * The syntax is inspired by ```.sbt``` files. You create mutations, using lens’ methods ```:=``` (set a value),
 ```~=``` (modify a value) and ```+=``` (add to value, works for scalaz monoids).
 * Of course you can use any other lens library, or even dispense with lens completely, as long as you create ```Mutation```s.
@@ -68,9 +68,9 @@ You can find even more examples in the tests.
 
 * See above
 * Better docs
-* Create a repo
+* Create a maven repo
 
 ### Acknowledgements
 
-**Mutate** is inspired by *sbt* and [rillit](https://github.com/akisaarinen/rillit). Quasiquotes compatibility layer
+**Mutate** is inspired by [*sbt*](http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#how-build-sbt-defines-settings) and [*rillit*](https://github.com/akisaarinen/rillit). Quasiquotes compatibility layer
 by @xeno_by is taken from here: https://github.com/scalamacros/sbt-example-paradise210.
