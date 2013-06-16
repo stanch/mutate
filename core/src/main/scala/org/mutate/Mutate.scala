@@ -11,12 +11,12 @@ case class Mutation[A](f: A ⇒ A) {
 }
 
 /* For a case where `get` is missing, see `FunctorLens` */
-class Lens[A, B](val get: Option[A ⇒ B], val set: A ⇒ B ⇒ A, val mod: A ⇒ (B ⇒ B) ⇒ A) extends Dynamic { self ⇒
+class Lens[A, B](val get: Option[A ⇒ B], val set: A ⇒ B ⇒ A, val mod: A ⇒ (B ⇒ B) ⇒ A) extends Dynamic {
     // composition operator
     def >=>[C](that: Lens[B, C]) = new Lens[A, C](
         get = this.get.flatMap { thisg ⇒ that.get.flatMap { thatg ⇒ Some(value ⇒ thatg(thisg(value))) }},
         set = value ⇒ field ⇒ this.mod(value)(that.set(_)(field)),
-        mod = value ⇒ f ⇒ self.mod(value)(that.mod(_)(f))
+        mod = value ⇒ f ⇒ this.mod(value)(that.mod(_)(f))
     )
 
     // compose `this` with field or functor lens
