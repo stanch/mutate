@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0m[32mMutateSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mMutate [0m[0m
+[0m[[0minfo[0m] [0m[32m- should work with single mutations[0m[0m
+[0m[[0minfo[0m] [0m[32m- should work with multiple mutations[0m[0m
+[0m[[0minfo[0m] [0m[32m- should work with several deep mutations[0m[0m
+[0m[[0minfo[0m] [0m[32mThe lenser [0m[0m
+[0m[[0minfo[0m] [0m[32m- should scrape though nested case classes[0m[0m
+[0m[[0minfo[0m] [0m[32m- should provide a "*" field to get inside functors[0m[0m
+[0m[[0minfo[0m] [0m[32mThe lens [0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle assignment[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle modification[0m[0m
+[0m[[0minfo[0m] [0m[32m- should handle addition for monoids[0m[0m
+[0m[[0minfo[0m] [0m[32m- should work with functors as expected[0m[0m

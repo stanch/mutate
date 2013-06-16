@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="org.mutate"
+		module="core_2.10"
+		revision="0.1-SNAPSHOT"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
+		date="20130616183932"/>
+	<dependencies>
+		<module organisation="org.scalaz" name="scalaz-core_2.10">
+			<revision name="7.0.0" status="release" pubdate="20130421165340" resolver="public" artresolver="public" homepage="http://scalaz.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2546" time="0" location="C:\Users\stanch\.ivy2\cache\org.scalaz\scalaz-core_2.10\ivy-7.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.0.0/scalaz-core_2.10-7.0.0.pom"/>
+				<caller organisation="org.mutate" name="core_2.10" conf="compile" rev="7.0.0" rev-constraint-default="7.0.0" rev-constraint-dynamic="7.0.0" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scalaz-core_2.10" type="bundle" ext="jar" status="no" details="" size="8621005" time="0" location="C:\Users\stanch\.ivy2\cache\org.scalaz\scalaz-core_2.10\bundles\scalaz-core_2.10-7.0.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.10/7.0.0/scalaz-core_2.10-7.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.macro-paradise" name="scala-reflect">
+			<revision name="2.10.2-SNAPSHOT" status="integration" pubdate="20130520172634" resolver="sonatype-snapshots" artresolver="sonatype-snapshots" homepage="http://www.scala-lang.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2741" time="0" location="C:\Users\stanch\.ivy2\cache\org.scala-lang.macro-paradise\scala-reflect\ivy-2.10.2-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/snapshots/org/scala-lang/macro-paradise/scala-reflect/2.10.2-SNAPSHOT/scala-reflect-2.10.2-20130520.162539-2.pom"/>
+				<caller organisation="org.mutate" name="core_2.10" conf="compile" rev="2.10.2-SNAPSHOT" rev-constraint-default="2.10.2-SNAPSHOT" rev-constraint-dynamic="2.10.2-SNAPSHOT" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3178118" time="0" location="C:\Users\stanch\.ivy2\cache\org.scala-lang.macro-paradise\scala-reflect\jars\scala-reflect-2.10.2-SNAPSHOT.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/snapshots/org/scala-lang/macro-paradise/scala-reflect/2.10.2-SNAPSHOT/scala-reflect-2.10.2-20130520.162539-2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang.macro-paradise" name="scala-library">
+			<revision name="2.10.2-SNAPSHOT" status="integration" pubdate="20130520172550" resolver="sonatype-snapshots" artresolver="sonatype-snapshots" homepage="http://www.scala-lang.org/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="2">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2554" time="0" location="C:\Users\stanch\.ivy2\cache\org.scala-lang.macro-paradise\scala-library\ivy-2.10.2-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/snapshots/org/scala-lang/macro-paradise/scala-library/2.10.2-SNAPSHOT/scala-library-2.10.2-20130520.162539-2.pom"/>
+				<caller organisation="org.scala-lang.macro-paradise" name="scala-reflect" conf="default, compile, runtime, master" rev="2.10.2-SNAPSHOT" rev-constraint-default="2.10.2-SNAPSHOT" rev-constraint-dynamic="2.10.2-SNAPSHOT" callerrev="2.10.2-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7121794" time="0" location="C:\Users\stanch\.ivy2\cache\org.scala-lang.macro-paradise\scala-library\jars\scala-library-2.10.2-SNAPSHOT.jar">
+						<origin-location is-local="false" location="https://oss.sonatype.org/content/repositories/snapshots/org/scala-lang/macro-paradise/scala-library/2.10.2-SNAPSHOT/scala-library-2.10.2-20130520.162539-2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.2-SNAPSHOT" status="integration" pubdate="20130616025301" resolver="sonatype-snapshots" artresolver="sonatype-snapshots" homepage="http://www.scala-lang.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2539" time="0" location="C:\Users\stanch\.ivy2\cache\org.scala-lang\scala-library\ivy-2.10.2-SNAPSHOT.xml" searched="true" origin-is-local="false" origin-location="https://oss.sonatype.org/content/repositories/snapshots/org/scala-lang/scala-library/2.10.2-SNAPSHOT/scala-library-2.10.2-20130616.015249-110.pom"/>
+				<caller organisation="org.scalaz" name="scalaz-core_2.10" conf="default, compile, runtime, master" rev="2.10.2-SNAPSHOT" rev-constraint-default="2.10.2-SNAPSHOT" rev-constraint-dynamic="2.10.0" callerrev="7.0.0"/>
+				<caller organisation="org.mutate" name="core_2.10" conf="compile" rev="2.10.2-SNAPSHOT" rev-constraint-default="2.10.2-SNAPSHOT" rev-constraint-dynamic="2.10.2-SNAPSHOT" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
