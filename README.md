@@ -92,4 +92,4 @@ test
 ### Acknowledgements
 
 **Mutate** is inspired by [*sbt*](http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#how-build-sbt-defines-settings) and [*rillit*](https://github.com/akisaarinen/rillit). Quasiquotes compatibility layer
-by @xeno_by is taken from here: https://github.com/scalamacros/sbt-example-paradise210.
+by @xeno-by is taken from here: https://github.com/scalamacros/sbt-example-paradise210.
