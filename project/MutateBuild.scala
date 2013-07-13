@@ -3,7 +3,7 @@ import sbt.Keys._
 
 object BuildSettings {
     val buildSettings = Defaults.defaultSettings ++ Seq(
-        organization := "org.mutate",
+        organization := "me.stanch",
         scalaVersion := "2.10.2",
         scalaOrganization := "org.scala-lang",
         resolvers += Resolver.sonatypeRepo("snapshots")
@@ -13,9 +13,9 @@ object BuildSettings {
 object MutateBuild extends Build {
     import BuildSettings._
 
-    lazy val core: Project = Project(
-        "core",
-        file("core"),
+    lazy val mutate: Project = Project(
+        "mutate",
+        file("mutate"),
         settings = buildSettings ++ Seq(
             scalaVersion := "2.10.2-SNAPSHOT",
             scalaOrganization := "org.scala-lang.macro-paradise",
@@ -30,5 +30,5 @@ object MutateBuild extends Build {
         settings = buildSettings ++ Seq(
 			libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
 		)
-    ) dependsOn (core)
+    ) dependsOn (mutate)
 }

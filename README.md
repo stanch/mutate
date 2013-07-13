@@ -59,6 +59,25 @@ assert(b === B("foo", A(List(9, 9), 5, Some(A(List(), 17, None)))))
 ```
 You can find even more examples in the tests.
 
+### Usage
+
+Install to local ivy repo:
+```
+git clone https://github.com/stanch/mutate.git
+cd mutate && sbt publish-local
+```
+To use:
+```
+libraryDependencies += "me.stanch" %% "mutate" % "0.1-SNAPSHOT"
+```
+To run tests:
+```
+cd mutate
+sbt
+project tests
+test
+```
+
 ### Current limitations
 
 * The support for defs and other stuff inside ```mutate``` is broken and hopefully will be fixed soon.
@@ -68,7 +87,7 @@ You can find even more examples in the tests.
 
 * See above
 * Better docs
-* Create a maven repo
+* Perhaps create a maven repo
 
 ### Acknowledgements
 
