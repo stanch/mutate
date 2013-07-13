@@ -19,7 +19,7 @@ object MutateBuild extends Build {
         settings = buildSettings ++ Seq(
             scalaVersion := "2.10.2-SNAPSHOT",
             scalaOrganization := "org.scala-lang.macro-paradise",
-            libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _),
+            libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _ % "provided"),
 			libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.0.0"
         )
     )
