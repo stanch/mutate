@@ -59,6 +59,30 @@ assert(b === B("foo", A(List(9, 9), 5, Some(A(List(), 17, None)))))
 ```
 You can find even more examples in the tests.
 
+### **NEW** *Mutate* now optionally supports [JsonLenses](https://github.com/jrudolph/json-lenses)
+
+The dependency is ```provided```, so you have to add it yourself.
+From the tests:
+```scala
+import org.mutate.Mutate._
+import spray.json._
+import DefaultJsonProtocol._
+import spray.json.lenses.JsonLenses._
+import org.mutate.JsonLensesSupport._
+
+val json = """{"a": {"c": 9}, "b": "foo"}""".asJson
+
+val upd = mutate(json) { $ ⇒
+    'a / 'c := 20
+}
+assert(upd === """{"a": {"c": 20}, "b": "foo"}""".asJson)
+
+val upd = mutate(json) { $ ⇒
+    field("b") ~= {x: String ⇒ x + "bar"}
+}
+assert(upd === """{"a": {"c": 9}, "b": "foobar"}""".asJson)
+```
+
 ### Usage
 
 Install to local ivy repo:
@@ -69,6 +93,9 @@ cd mutate && sbt publish-local
 To use:
 ```
 libraryDependencies += "me.stanch" %% "mutate" % "0.1-SNAPSHOT"
+```
+```
+import org.mutate.Mutate._
 ```
 To run tests:
 ```
