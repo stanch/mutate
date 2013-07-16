@@ -33,9 +33,9 @@ class JsonLensesSupportSpec extends FlatSpec {
     }
 
     case class A(u: Int, v: JsValue)
-    val contrieved = A(5, """{"q": [2, 7, 83], "p": 9}""".asJson)
+    val contrived = A(5, """{"q": [2, 7, 83], "p": 9}""".asJson)
     it should "be fine to mix with $" in {
-        val upd = mutate(contrieved) { $ ⇒
+        val upd = mutate(contrived) { $ ⇒
             $.u := 10
             $.v ~= {x: JsValue ⇒ mutate(x) { $ ⇒
                 'q / * ~= {x: Int ⇒ x - 2}
