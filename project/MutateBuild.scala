@@ -4,7 +4,7 @@ import sbt.Keys._
 object BuildSettings {
     val buildSettings = Defaults.defaultSettings ++ Seq(
         organization := "me.stanch",
-        scalaVersion := "2.10.2",
+        scalaVersion := "2.10.0",
         scalaOrganization := "org.scala-lang",
         resolvers += Resolver.sonatypeRepo("snapshots")
     )
@@ -17,9 +17,9 @@ object MutateBuild extends Build {
         "mutate",
         file("mutate"),
         settings = buildSettings ++ Seq(
-            scalaVersion := "2.10.2-SNAPSHOT",
+            scalaVersion := "2.10.3-SNAPSHOT",
             scalaOrganization := "org.scala-lang.macro-paradise",
-            libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _ % "provided"),
+            libraryDependencies <+= (scalaVersion)("org.scala-lang.macro-paradise" % "scala-reflect" % _),
 			libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.0.0"
         )
     )
