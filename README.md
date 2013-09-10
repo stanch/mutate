@@ -85,24 +85,16 @@ assert(upd === """{"a": {"c": 9}, "b": "foobar"}""".asJson)
 
 ### Usage
 
-Install to local ivy repo:
 ```
-git clone https://github.com/stanch/mutate.git
-cd mutate && sbt publish-local
-```
-To use:
-```
+resolvers ++= Seq(
+    "Mutate snapshots" at "http://stanch.github.com/mutate/snapshots/",
+    Resolver.sonatypeRepo("snapshots")
+)
+
 libraryDependencies += "me.stanch" %% "mutate" % "0.1-SNAPSHOT"
 ```
 ```
 import org.mutate.Mutate._
-```
-To run tests:
-```
-cd mutate
-sbt
-project tests
-test
 ```
 
 ### Current limitations
@@ -114,7 +106,6 @@ test
 
 * See above
 * Better docs
-* Perhaps create a maven repo
 
 ### Acknowledgements
 
